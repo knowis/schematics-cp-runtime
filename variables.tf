@@ -29,17 +29,17 @@ variable "cluster_name" {
 }
 
 variable "region" {
-  default                     = "us-south"
-  description                 = "The IBM Cloud region where you want to deploy your cluster."
+  default                     = "eu-de"
+  description                 = "The IBM Cloud region where you want to deploy your cluster, You can get the list with by running bluemix regions."
 }
 
 variable "datacenter" {
-  default                     = "dal12"
+  default                     = "fra02"
   description                 = "The data center for the cluster, You can get the list with by running bluemix cs locations."
 }
 
 variable "machine_type" {
-  default                     = "u1c.2x4"
+  default                     = "free"
   description                 = "The CPU cores, memory, network, and speed. You can get a list for a given location by running bluemix cs machine-types <location>."
 }
 
