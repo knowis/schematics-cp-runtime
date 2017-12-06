@@ -19,38 +19,38 @@ module "kube" {
 ############################################
 # Create the APIConnect instance
 ############################################
-module "apiconnect" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "APIConnect"
-    plan                            = "Essential"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "apiconnect" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "APIConnect"
+#    plan                            = "Essential"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the SingleSignOn instance
 ############################################
-module "sso" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "SingleSignOn"
-    plan                            = "professional"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "sso" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "SingleSignOn"
+#    plan                            = "professional"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the AvailabilityMonitoring instance
 ############################################
-module "availability" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "AvailabilityMonitoring"
-    plan                            = "Paid"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "availability" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "AvailabilityMonitoring"
+#    plan                            = "Paid"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the monitoring instance
@@ -67,83 +67,83 @@ module "monitoring" {
 ############################################
 # Create the cloud object store instance
 ############################################
-module "cos" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "cloud-object-storage"
-    plan                            = "Premium"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "cos" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "cloud-object-storage"
+#    plan                            = "Premium"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the mongodb instance
 ############################################
-module "mongodb" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "compose-for-mongodb"
-    plan                            = "Standard"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "mongodb" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "compose-for-mongodb"
+#    plan                            = "Standard"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the elasticsearch instance
 ############################################
-module "elasticsearch" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "compose-for-elasticsearch"
-    plan                            = "Standard"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "elasticsearch" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "compose-for-elasticsearch"
+#    plan                            = "Standard"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the redis instance
 ############################################
-module "redis" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "compose-for-redis"
-    plan                            = "Standard"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "redis" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "compose-for-redis"
+#    plan                            = "Standard"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the message hub instance
 ############################################
-module "messagehub" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
-    servicename                     = "messagehub"
-    plan                            = "standard"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-}
+#module "messagehub" {
+#    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+#    servicename                     = "messagehub"
+#    plan                            = "standard"
+#    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
+#    org                             = "${var.org}"
+#    space                           = "${var.space}"
+#}
 
 ############################################
 # Create the NFS storage
 ############################################
 
-provider "kubernetes" {
-  config_path = "${module.kube.cluster_config_file_path}"
-}
+#provider "kubernetes" {
+#  config_path = "${module.kube.cluster_config_file_path}"
+#}
 
-resource "kubernetes_persistent_volume_claim" "pvolume" {
-  metadata {
-    name = "pvolume"
-  }
-  spec {
-    access_modes = ["ReadWriteMany"]
-    resources {
-      requests {
-        storage = "20Gi"
-      }
-    }
-    volume_name = "pvolume"
-    storage_class_name = "ibmc-file-gold"
-  }
-}
+#resource "kubernetes_persistent_volume_claim" "pvolume" {
+#  metadata {
+#    name = "pvolume"
+#  }
+#  spec {
+#    access_modes = ["ReadWriteMany"]
+#    resources {
+#      requests {
+#        storage = "20Gi"
+#      }
+#    }
+#    volume_name = "pvolume"
+#    storage_class_name = "ibmc-file-gold"
+#  }
+#}
