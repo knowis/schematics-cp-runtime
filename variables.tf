@@ -11,14 +11,6 @@ variable "space" {
   default                     = "dev"
   description                 = "Your IBM Cloud space name."
 }
-#variable "ibm_sl_api_key" {
-#  description                 = "Your IBM Cloud Infrastructure API key."
-#}
-
-#variable "ibm_sl_user" {
-#  description                 = "Your IBM Cloud Infrastructure user name."
-#}
-
 variable "num_workers" {
     default                   = "4"
 }
@@ -57,14 +49,4 @@ variable "public_vlan_id" {
 
 variable "subnet_id" {
   description                 = "The portable subnet to use for cluster. You can view a list of available subnets by running bx cs subnets."
-}
-
-variable "cloudant_servicename" {
-  description                 = "The name of the service type you want to create. You can run bx cf marketplace."
-  default                     = "cloudantNoSQLDB"
-}
-
-variable "cloudant_plan" {
-  description                 = "The corresponding name of the plan for the service type you want to create. You can run bx cf marketplace -s <servicename>."
-  default                     = "Standard"
 }
