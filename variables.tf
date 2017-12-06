@@ -11,13 +11,13 @@ variable "space" {
   default                     = "dev"
   description                 = "Your IBM Cloud space name."
 }
-variable "ibm_sl_api_key" {
-  description                 = "Your IBM Cloud Infratructure API key."
-}
+#variable "ibm_sl_api_key" {
+#  description                 = "Your IBM Cloud Infrastructure API key."
+#}
 
-variable "ibm_sl_user" {
-  description                 = "Your IBM Cloud Infrastructure user name."
-}
+#variable "ibm_sl_user" {
+#  description                 = "Your IBM Cloud Infrastructure user name."
+#}
 
 variable "num_workers" {
     default                   = "4"
