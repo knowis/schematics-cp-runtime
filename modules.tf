@@ -3,7 +3,7 @@
 # Create the Kube cluster
 ############################################
 module "kube" {
-  source                          = "git@github.com:Cloud-Schematics/container-cluster.git"
+  source                          = "github.com/Cloud-Schematics/container-cluster"
   cluster_name                    = "${var.cluster_name}"
   datacenter                      = "${var.datacenter}"
   machine_type                    = "${var.machine_type}"
@@ -56,7 +56,7 @@ module "kube" {
 # Create the monitoring instance
 ############################################
 module "monitoring" {
-    source                          = "git@github.com:Cloud-Schematics/cloud-service.git"
+    source                          = "github.com/Cloud-Schematics/cloud-service"
     servicename                     = "Monitoring"
     plan                            = "lite"
     ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
