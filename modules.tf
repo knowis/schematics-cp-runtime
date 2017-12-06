@@ -14,6 +14,7 @@ module "kube" {
   subnet_id                       = "${var.subnet_id}"
   org                             = "${var.org}"
   space                           = "${var.space}"
+  region                          = "${var.region}"
 }
 
 ############################################
