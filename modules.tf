@@ -16,3 +16,31 @@ module "kube" {
   space                           = "${var.space}"
   region                          = "${var.region}"
 }
+
+
+############################################
+# Deploy pod
+############################################
+provider "kubernetes" {
+  config_path = "${module.kube.cluster_config_file_path}"
+}
+
+resource "kubernetes_pod" "domain-server-pod-test" {
+  metadata {
+    name = "domain-server-pod"
+  }
+
+  spec {
+    image_pull_secrets {
+      name = "${var.docker_pull_secret}"
+    }
+    container {
+      image = "registry.eu-de.bluemix.net/cp_runtime/domain-server:latest"
+      name  = "domain-server-docker"
+      port = {
+        container_port = "80"
+        host_port = "8080"
+      }
+    }
+  }
+}
