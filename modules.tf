@@ -16,16 +16,3 @@ module "kube" {
   space                           = "${var.space}"
   region                          = "${var.region}"
 }
-
-############################################
-# Create the monitoring instance
-############################################
-module "monitoring" {
-    source                          = "github.com/Cloud-Schematics/cloud-service"
-    servicename                     = "Monitoring"
-    plan                            = "lite"
-    ibm_bmx_api_key                 = "${var.ibm_bmx_api_key}"
-    org                             = "${var.org}"
-    space                           = "${var.space}"
-    region                          = "${var.region}"
-}
