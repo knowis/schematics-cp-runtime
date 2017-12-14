@@ -4,10 +4,6 @@ variable "ibm_bmx_api_key" {
   description                 = "Your IBM Cloud API key. You can get the value by running bx iam api-key-create <key name>."
 }
 
-variable "docker_pull_secret" {
-  description                 = "Your IBM Docker registry pull secret."
-}
-
 variable "org" {
   description                 = "Your IBM Cloud org name."
 }
